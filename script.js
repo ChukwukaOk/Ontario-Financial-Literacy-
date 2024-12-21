@@ -7,7 +7,7 @@ const quizData = [
       'C. A type of bank transaction',
       'D. A legal way to share personal data',
     ],
-    answer: 'B',
+    answer: 'B. Fraudulent attempts to obtain sensitive information by pretending to be a trusted entity',
   },
   {
     question: 'What is the safest way to use your credit card online?',
@@ -17,7 +17,7 @@ const quizData = [
       'C. Share your details over email if requested',
       'D. Avoid using credit cards online altogether',
     ],
-    answer: 'B',
+    answer: 'B. Use a secure, encrypted website with "https://" in the URL',
   },
   {
     question: 'What does two-factor authentication (2FA) enhance?',
@@ -27,7 +27,7 @@ const quizData = [
       'C. Simplicity of password management',
       'D. Speed of logging into accounts',
     ],
-    answer: 'B',
+    answer: 'B. Security by requiring a second form of verification',
   },
   {
     question: 'Which of the following is a common sign of identity theft?',
@@ -37,7 +37,7 @@ const quizData = [
       'C. Receiving a new credit card you requested',
       'D. A sudden increase in your credit score',
     ],
-    answer: 'B',
+    answer: 'B. Unfamiliar charges on your bank or credit card statement',
   },
   {
     question: 'If you receive an email from a bank asking for your account details, you should',
@@ -47,7 +47,7 @@ const quizData = [
       'C. Avoid responding and contact your bank directly using official contact details',
       'D. Forward the email to your friends for their opinion',
     ],
-    answer: 'C',
+    answer: 'C. Avoid responding and contact your bank directly using official contact details',
   },
   {
     question: 'What should you do if you suspect your identity has been stolen?',
@@ -57,7 +57,7 @@ const quizData = [
       'C. Ignore it unless you lose money',
       'D. Change all your social media passwords',
     ],
-    answer: 'B',
+    answer: 'B. Contact your bank or credit card company immediately and report the fraud',
   },
   {
     question: 'Which of the following should you do to protect your personal information?',
@@ -67,7 +67,7 @@ const quizData = [
       'C. Write down your passwords in a notebook',
       'D. Send sensitive details via unsecured email',
     ],
-    answer: 'B',
+    answer: 'B. Use strong, unique passwords and avoid sharing sensitive information online',
   },
   {
     question: 'What is the main benefit of using a credit monitoring service?',
@@ -77,7 +77,7 @@ const quizData = [
       'C. It automatically prevents fraud from happening',
       'D. It provides free credit reports for life',
     ],
-    answer: 'B',
+    answer: 'B. It helps detect fraudulent activity on your accounts early',
   },
   {
     question: 'Which is a reliable method to monitor your accounts for fraud?',
@@ -87,7 +87,7 @@ const quizData = [
       'C. Only check your accounts once a year',
       'D. Rely on your credit card company to catch fraud',
     ],
-    answer: 'A',
+    answer: 'A. Regularly review your account statements for unauthorized transactions',
   },
   {
     question: 'Which of the following actions can help protect you from financial fraud?',
@@ -97,7 +97,7 @@ const quizData = [
       'C. Shredding sensitive documents before disposal and avoiding sharing private details',
       'D. Writing down your Social Security number for easy access',
     ],
-    answer: 'C',
+    answer: 'C. Shredding sensitive documents before disposal and avoiding sharing private details',
   },
   {
     question: 'What should you look for to ensure a website is secure for transactions?',
@@ -107,7 +107,7 @@ const quizData = [
       'C. A recommendation from a friend',
       'D. A non-functional website footer',
     ],
-    answer: 'A',
+    answer: 'A. A lock icon and "https://" in the website URL',
   },
   {
     question: 'Why is it important to review your bank statements regularly?',
@@ -117,7 +117,7 @@ const quizData = [
       'C. To calculate your monthly income',
       'D. To qualify for higher credit limits',
     ],
-    answer: 'B',
+    answer: 'B. To detect unauthorized transactions or errors',
   },
   {
     question: 'What is the primary purpose of an emergency fund?',
@@ -127,7 +127,7 @@ const quizData = [
       'C. To pay for luxury items',
       'D. To qualify for a mortgage',
     ],
-    answer: 'B',
+    answer: 'B. To cover unexpected expenses or financial emergencies',
   },
   {
     question: 'How can you protect yourself from online financial fraud?',
@@ -137,7 +137,7 @@ const quizData = [
       'C. Use the same password for all your accounts',
       'D. Post your financial details on social media for backup',
     ],
-    answer: 'B',
+    answer: 'B. Avoid clicking on links in unsolicited emails',
   },
   {
     question: 'What is the benefit of setting financial goals?',
@@ -147,11 +147,10 @@ const quizData = [
       'C. To spend money more freely',
       'D. To reduce your credit score',
     ],
-    answer: 'A',
+    answer: 'A. To track your spending habits and prioritize savings',
   },
-  
-  
 ];
+
 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
