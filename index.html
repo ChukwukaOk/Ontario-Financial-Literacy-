@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ontario Financial Literacy Quiz App</title>
-  <link rel="stylesheet" href="styles.css">
+    <title>Ontario Financial Literacy Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Quiz App</h1>
-    <div id="quiz"></div>
-    <div id="result" class="result"></div>
-    <button id="submit" class="button">Submit</button>
-    <button id="retry" class="button hide">Retry</button>
-    <button id="showAnswer" class="button hide">Show Answer</button>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <h1>Financial Literacy Quiz</h1>
+        
+        <div class="quiz-section">
+            <div class="quiz-header">
+                <h2>Test Your Knowledge</h2>
+                <p>Choose a quiz set to begin:</p>
+            </div>
+            
+            <div class="quiz-sets">
+                <button class="set-button" onclick="loadQuizSet(1)">Basic Finance</button>
+                <button class="set-button" onclick="loadQuizSet(2)">Advanced Finance</button>
+            </div>
+
+            <div id="quiz"></div>
+            <div id="result" class="result"></div>
+            
+            <div class="button-group">
+                <button id="submit" class="button">Submit</button>
+                <button id="retry" class="button hide">Retry</button>
+                <button id="showAnswer" class="button hide">Show Answer</button>
+            </div>
+        </div>
+
+        <footer class="creators">
+            <h3>Created By:</h3>
+            <div class="creator-links">
+                <a href="https://www.linkedin.com/in/chukwukao/" target="_blank" class="linkedin-link">
+                    <i class="fab fa-linkedin"></i> Chukwuka O.
+                </a>
+                <a href="https://www.linkedin.com/in/talha-inam-4826b230b/" target="_blank" class="linkedin-link">
+                    <i class="fab fa-linkedin"></i> Talha Inam
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
