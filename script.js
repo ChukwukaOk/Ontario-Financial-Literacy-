@@ -301,6 +301,21 @@ function displayQuestion() {
   quizContainer.innerHTML = '';
   quizContainer.appendChild(questionElement);
   quizContainer.appendChild(optionsElement);
+
+  // Add event listeners to new options
+  const options = document.querySelectorAll('.option');
+  options.forEach(option => {
+    option.addEventListener('mouseover', () => {
+      option.style.backgroundColor = '#f0f0f0';
+      option.style.transform = 'scale(1.02)';
+      option.style.transition = 'all 0.2s ease';
+    });
+    
+    option.addEventListener('mouseout', () => {
+      option.style.backgroundColor = '';
+      option.style.transform = 'scale(1)';
+    });
+  });
 }
 
 function checkAnswer() {
@@ -375,3 +390,62 @@ retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
 
 displayQuestion();
+
+// Add visual feedback when selecting options
+const options = document.querySelectorAll('.option');
+options.forEach(option => {
+  option.addEventListener('mouseover', () => {
+    option.style.backgroundColor = '#f0f0f0';
+    option.style.transform = 'scale(1.02)';
+    option.style.transition = 'all 0.2s ease';
+  });
+  
+  option.addEventListener('mouseout', () => {
+    option.style.backgroundColor = '';
+    option.style.transform = 'scale(1)';
+  });
+});
+
+// Style the quiz container
+const container = document.querySelector('.container');
+container.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)';
+container.style.border = '1px solid #e0e0e0';
+container.style.padding = '32px';
+
+// Style the heading
+const heading = document.querySelector('h1');
+heading.style.color = '#2c3e50';
+heading.style.fontSize = '2.5em';
+heading.style.marginBottom = '30px';
+heading.style.borderBottom = '2px solid #428bca';
+heading.style.paddingBottom = '10px';
+
+// Style the buttons
+const buttons = document.querySelectorAll('.button');
+buttons.forEach(button => {
+  button.style.backgroundColor = '#2980b9';
+  button.style.padding = '12px 28px';
+  button.style.borderRadius = '25px';
+  button.style.fontWeight = '500';
+  button.style.letterSpacing = '0.5px';
+  button.style.boxShadow = '0 4px 12px rgba(41,128,185,0.3)';
+  
+  button.addEventListener('mouseover', () => {
+    button.style.backgroundColor = '#3498db';
+    button.style.transform = 'translateY(-2px)';
+    button.style.boxShadow = '0 6px 16px rgba(41,128,185,0.4)';
+  });
+  
+  button.addEventListener('mouseout', () => {
+    button.style.backgroundColor = '#2980b9';
+    button.style.transform = 'translateY(0)';
+    button.style.boxShadow = '0 4px 12px rgba(41,128,185,0.3)';
+  });
+});
+
+// Style the result container
+resultContainer.style.padding = '20px';
+resultContainer.style.marginTop = '20px';
+resultContainer.style.borderRadius = '8px';
+resultContainer.style.backgroundColor = '#f8f9fa';
+resultContainer.style.border = '1px solid #dee2e6';
