@@ -32,6 +32,20 @@ h1 {
 .option {
   display: block;
   margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+}
+
+.option input[type="radio"] {
+  margin-right: 10px;
 }
 
 .button {
