@@ -6,27 +6,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Financial Literacy Quiz</h1>
-        
-        <div class="quiz-section">
+            <header class="site-header">
+                <div class="inner">
+                    <h1 class="brand">Ontario Financial Literacy</h1>
+                </div>
+            </header>
+
+        <main class="page">
+            <section class="hero">
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <h1>Financial Literacy Quiz</h1>
+                        <p class="hero-sub">Test your knowledge and learn practical money skills.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content container">
+                <div class="quiz-section card">
             <div class="quiz-header">
                 <h2>Test Your Knowledge</h2>
             </div>
 
+            <div class="controls">
+                <div class="modes">
+                    <label>Mode:</label>
+                    <select id="modeSelect">
+                        <option value="standard">Standard</option>
+                        <option value="flashcards">Flashcards</option>
+                        <option value="rapid">Rapid-Fire</option>
+                    </select>
+                </div>
+
+                <div class="levels">
+                    <label>Level:</label>
+                    <div id="levelButtons" class="level-buttons">
+                        <!-- buttons injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="last-score" id="lastScoreDisplay" style="text-align:right; font-size:0.95em; color:#555; margin-bottom:8px;">Last score: --</div>
+
             <div id="quiz"></div>
+            <div id="flashcard" class="hide"></div>
+            <div id="rapidInfo" class="rapid-panel">
+                <div class="rapid-left">Time left: <span id="rapidTimer" class="rapid-value">--</span>s</div>
+                <div class="rapid-right">Streak: <span id="rapidStreak" class="rapid-value">0</span></div>
+            </div>
+
             <div id="result" class="result"></div>
             
             <div class="button-group">
                 <button id="submit" class="button">Submit</button>
+                <button id="next" class="button hide">Next</button>
                 <button id="retry" class="button hide">Retry</button>
                 <button id="showAnswer" class="button hide">Show Answer</button>
             </div>
         </div>
+
+        <div class="chatbot">
+            <h4 id="helpHeader">Need help? Ask the built-in assistant</h4>
+            <div id="chatWindow" class="chat-window"></div>
+            <div class="chat-input">
+                <input id="chatInputField" type="text" placeholder="Ask a question or type 'hint'" />
+                <button id="chatSendButton" class="button">Ask</button>
+                <button id="getHintBtn" class="button">Get Hint</button>
+            </div>
+        </div>
         
-        <div style="margin: 30px 0;"></div>
-        
-        <footer class="creators">
+                <div style="margin: 30px 0;"></div>
+
+            </section>
+        </main>
+
+        <footer class="creators site-footer">
             <h3>Created By:</h3>
             <div class="creator-links">
                 <a href="https://www.linkedin.com/in/chukwukao/" target="_blank" class="creator-link">
@@ -38,11 +92,10 @@
                     <span>Talha Inam</span>
                 </a>
             </div>
+                </div>
         </footer>
-    </div>
 
-    
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
+
