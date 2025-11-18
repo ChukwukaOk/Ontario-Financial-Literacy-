@@ -776,3 +776,4 @@ getHintBtn.addEventListener('click', () => {
   const h = hintEngine.getHint(q);
   addChatMessage(h, 'bot');
 });
+
