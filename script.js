@@ -585,12 +585,12 @@ function displayResult() {
   if (percent >= 60 && unlockedLevels < levels.length) unlockedLevels++;
   savePersistence();
 
-  resultContainer.innerHTML = `You scored ${score} out of ${activeQuestions.length}! (${percent}%)`;
+  resultContainer.innerHTML = `You scored <span class="emph">${score} out of ${activeQuestions.length}</span>! (<span class="emph">${percent}%</span>)`;
   // show incorrect answers
   if (incorrectAnswers.length) {
     let html = '<div><h4>Review:</h4>';
     incorrectAnswers.forEach(i => {
-      html += `<p><strong>Q:</strong> ${i.question}<br><strong>Your:</strong> ${i.incorrectAnswer}<br><strong>Correct:</strong> ${i.correctAnswer}</p>`;
+      html += `<p><strong>Q:</strong> ${i.question}<br><strong>Your:</strong> ${i.incorrectAnswer}<br><strong>Correct:</strong> <span class="emph">${i.correctAnswer}</span></p>`;
     });
     html += '</div>';
     resultContainer.innerHTML += html;
@@ -625,10 +625,10 @@ function showAnswer() {
 
   let incorrectAnswersHtml = '';
   for (let i = 0; i < incorrectAnswers.length; i++) {
-    incorrectAnswersHtml += `\n      <p>\n        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>\n        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>\n        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}\n      </p>\n    `;
+    incorrectAnswersHtml += `\n      <p>\n        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>\n        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>\n        <strong>Correct Answer:</strong> <span class="emph">${incorrectAnswers[i].correctAnswer}</span>\n      </p>\n    `;
   }
 
-  resultContainer.innerHTML = `\n    <p>You scored ${score} out of ${activeQuestions.length}!</p>\n    <p>Incorrect Answers:</p>\n    ${incorrectAnswersHtml}\n  `;
+  resultContainer.innerHTML = `\n    <p>You scored <span class="emph">${score} out of ${activeQuestions.length}</span>!</p>\n    <p>Incorrect Answers:</p>\n    ${incorrectAnswersHtml}\n  `;
 }
 
 submitButton.addEventListener('click', checkAnswer);
@@ -776,4 +776,3 @@ getHintBtn.addEventListener('click', () => {
   const h = hintEngine.getHint(q);
   addChatMessage(h, 'bot');
 });
-
